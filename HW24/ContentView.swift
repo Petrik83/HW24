@@ -8,9 +8,12 @@
 import SwiftUI
 import Alamofire
 struct ContentView: View {
-
+    @State var text = ""
     var body: some View {
-        CardsList()
+        VStack {
+            SearchBar(text: $text)
+            CardsList()
+        }
     }
 }
 
