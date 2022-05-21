@@ -8,12 +8,17 @@
 import SwiftUI
 import Alamofire
 struct ContentView: View {
-    @State var text = ""
+    @State var text = "Black Lotus"
+    
     var body: some View {
-        VStack {
-            SearchBar(text: $text)
-            CardsList()
+        NavigationView {
+            VStack {
+                SearchBar(text: $text)
+                CardsList()
+            }
+            .navigationTitle("Magic: The Gathering")
         }
+        
     }
 }
 

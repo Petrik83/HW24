@@ -15,17 +15,34 @@ struct SearchBar: View {
     var body: some View {
         HStack {
 
-            TextField("Search ...", text: $text)
-                .padding(7)
-                .padding(.horizontal, 25)
-                .background(Color(.systemGray6))
-                .cornerRadius(8)
-                .padding(.horizontal, 10)
-                .onTapGesture {
-                    self.isEditing = true
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .padding(.leading)
+                TextField("Search ...", text: $text)
+                    .padding(7)
+//                    .padding(.horizontal, 25)
+//                    .background(Color(.systemGray6))
+//                    .cornerRadius(8)
+//                    .padding(.horizontal, 10)
+                    .onTapGesture {
+                        self.isEditing = true
                 }
+                
+                Button(action: {
+                    self.text = ""
+                }) {
+                    Image(systemName: "xmark.circle.fill").opacity(text == "" ? 0 : 1)
+                }
+                .padding(.trailing)
 
-            if isEditing {
+            }
+            .foregroundColor(.secondary)
+//            .padding()
+            .background(Color(.secondarySystemBackground))
+            .cornerRadius(8)
+
+
+//            if isEditing {
                 Button(action: {
                     self.isEditing = false
                     self.text = ""
@@ -36,8 +53,10 @@ struct SearchBar: View {
                 .padding(.trailing, 10)
                 .transition(.move(edge: .trailing))
                 .animation(.default)
-            }
+//            }
         }
+        .padding()
+
     }
 }
 
