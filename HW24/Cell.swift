@@ -12,8 +12,13 @@ struct Cell: View {
     var body: some View {
         HStack {
                         VStack {
+                            Spacer()
+
                             Text("Card Name")
+                            Spacer()
                             Text("Set Name")
+                            Spacer()
+
                         }
             Spacer()
                         AsyncImage(url: URL(string: imageUrls)) { image in
@@ -21,8 +26,10 @@ struct Cell: View {
                         } placeholder: {
                             ProgressView()
                         }
-                        .frame(width: 50, height: 75)
+                        .frame(width: 100, height: 125)
                     }
+        .frame(height: 135)
+
         .padding()
                 }
     
