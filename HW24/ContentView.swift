@@ -9,8 +9,7 @@ import SwiftUI
 import Alamofire
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Cell()
     }
 }
 
