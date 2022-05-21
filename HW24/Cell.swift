@@ -10,28 +10,34 @@ import SwiftUI
 struct Cell: View {
     let imageUrls = "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=600&type=card"
     var body: some View {
-        HStack {
-                        VStack {
-                            Spacer()
-
-                            Text("Card Name")
-                            Spacer()
-                            Text("Set Name")
-                            Spacer()
-
-                        }
-            Spacer()
-                        AsyncImage(url: URL(string: imageUrls)) { image in
-                            image.resizable()
-                        } placeholder: {
-                            ProgressView()
-                        }
-                        .frame(width: 100, height: 125)
-                    }
-        .frame(height: 135)
-
-        .padding()
+        VStack {
+            Divider()
+            HStack {
+                VStack {
+                    Spacer()
+                    
+                    Text("Card Name")
+                    Spacer()
+                    Text("Set Name")
+                    Spacer()
+                    
                 }
+                Spacer()
+                AsyncImage(url: URL(string: imageUrls)) { image in
+                    image.resizable().padding(.vertical, 3)
+
+                    
+                } placeholder: {
+                    ProgressView()
+                }
+                .frame(width: 100, height: 125)
+            }
+//            .frame(height: 135)
+            
+            .padding(.horizontal)
+//            Divider()
+        }
+    }
     
 }
 
