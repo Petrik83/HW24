@@ -27,6 +27,7 @@
 		6DE44BEC2838E5F7009142E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6DE44BF32838E786009142E4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		6DE44BF52838E801009142E4 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		6DE44BF92838EB98009142E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		6DE44BE42838E5F6009142E4 /* HW24 */ = {
 			isa = PBXGroup;
 			children = (
+				6DE44BF92838EB98009142E4 /* Info.plist */,
 				6DE44BE52838E5F6009142E4 /* HW24App.swift */,
 				6DE44BE72838E5F6009142E4 /* ContentView.swift */,
 				6DE44BF52838E801009142E4 /* Cell.swift */,
@@ -347,6 +349,7 @@
 				DEVELOPMENT_TEAM = ZB4T6SD8SN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HW24/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -377,6 +380,7 @@
 				DEVELOPMENT_TEAM = ZB4T6SD8SN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HW24/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
