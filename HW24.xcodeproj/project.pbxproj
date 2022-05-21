@@ -11,9 +11,13 @@
 		6DE44BE82838E5F6009142E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE44BE72838E5F6009142E4 /* ContentView.swift */; };
 		6DE44BEA2838E5F7009142E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DE44BE92838E5F7009142E4 /* Assets.xcassets */; };
 		6DE44BED2838E5F7009142E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DE44BEC2838E5F7009142E4 /* Preview Assets.xcassets */; };
+		8A52B0F53E2FEC6233E41DCD /* Pods_HW24.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FAED23B02B4EE25CADECBFB /* Pods_HW24.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FAED23B02B4EE25CADECBFB /* Pods_HW24.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HW24.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB8F724A3126DB02925CA27 /* Pods-HW24.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW24.debug.xcconfig"; path = "Target Support Files/Pods-HW24/Pods-HW24.debug.xcconfig"; sourceTree = "<group>"; };
+		68291373B0A48DC9FC1725A5 /* Pods-HW24.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW24.release.xcconfig"; path = "Target Support Files/Pods-HW24/Pods-HW24.release.xcconfig"; sourceTree = "<group>"; };
 		6DE44BE22838E5F6009142E4 /* HW24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE44BE52838E5F6009142E4 /* HW24App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW24App.swift; sourceTree = "<group>"; };
 		6DE44BE72838E5F6009142E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +30,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A52B0F53E2FEC6233E41DCD /* Pods_HW24.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D8FA00D04156BADA1A166B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BB8F724A3126DB02925CA27 /* Pods-HW24.debug.xcconfig */,
+				68291373B0A48DC9FC1725A5 /* Pods-HW24.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5200705C618B324D76980CB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FAED23B02B4EE25CADECBFB /* Pods_HW24.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6DE44BD92838E5F6009142E4 = {
 			isa = PBXGroup;
 			children = (
 				6DE44BE42838E5F6009142E4 /* HW24 */,
 				6DE44BE32838E5F6009142E4 /* Products */,
+				1D8FA00D04156BADA1A166B1 /* Pods */,
+				5200705C618B324D76980CB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6DE44BF02838E5F7009142E4 /* Build configuration list for PBXNativeTarget "HW24" */;
 			buildPhases = (
+				25DA39B0902C8EB7F6B0F35E /* [CP] Check Pods Manifest.lock */,
 				6DE44BDE2838E5F6009142E4 /* Sources */,
 				6DE44BDF2838E5F6009142E4 /* Frameworks */,
 				6DE44BE02838E5F6009142E4 /* Resources */,
+				1EC036D3E637EB50F1634CD3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EC036D3E637EB50F1634CD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HW24/Pods-HW24-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HW24/Pods-HW24-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HW24/Pods-HW24-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25DA39B0902C8EB7F6B0F35E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HW24-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6DE44BDE2838E5F6009142E4 /* Sources */ = {
@@ -261,6 +330,7 @@
 		};
 		6DE44BF12838E5F7009142E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BB8F724A3126DB02925CA27 /* Pods-HW24.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,6 +360,7 @@
 		};
 		6DE44BF22838E5F7009142E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68291373B0A48DC9FC1725A5 /* Pods-HW24.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
