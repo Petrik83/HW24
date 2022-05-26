@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import Alamofire
 
 struct SearchBar: View {
     @Binding var text: String
 
     @State private var isEditing = false
-
+    @Binding var cardsArray: Cards
     var body: some View {
         HStack {
 
@@ -20,16 +21,13 @@ struct SearchBar: View {
                     .padding(.leading)
                 TextField("Search ...", text: $text)
                     .padding(7)
-//                    .padding(.horizontal, 25)
-//                    .background(Color(.systemGray6))
-//                    .cornerRadius(8)
-//                    .padding(.horizontal, 10)
                     .onTapGesture {
                         self.isEditing = true
                 }
                 
                 Button(action: {
                     self.text = ""
+//                    print(cardsArray)
                 }) {
                     Image(systemName: "xmark.circle.fill").opacity(text == "" ? 0 : 1)
                 }
@@ -44,9 +42,12 @@ struct SearchBar: View {
 
 //            if isEditing {
                 Button(action: {
-                    self.isEditing = false
-                    self.text = ""
-
+                    ReceveData(cardName: text).fetchCardsData { recevedData in
+                        cardsArray = Cards(cards: [Card]())
+                        cardsArray = recevedData
+//                        print(cardsArray)
+                        print("----------------------------")
+                    }
                 }) {
                     Text("Search")
                 }
@@ -60,8 +61,8 @@ struct SearchBar: View {
     }
 }
 
-struct SearchBar_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchBar(text: .constant(""))
-    }
-}
+//struct SearchBar_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SearchBar(text: .constant(""))
+//    }
+//}

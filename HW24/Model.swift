@@ -8,7 +8,7 @@
 import Foundation
 
 struct Cards: Decodable {
-        let cards: [Card]
+        var cards: [Card]
 }
 
 struct Card: Decodable {
