@@ -21,7 +21,7 @@ class ResevedData: ObservableObject {
     func getData() {
         delegate?.getCardsFromURL(cardName: searchText, complition: { card in
             self.cardsData = card
-            print(card)
+//            print(card)
         })
         isLoaded = true
     }

@@ -13,13 +13,12 @@ class ReceveData {
     
     init(cardName: String) {
         self.cardName = cardName
+        
     }
-    
     
     func fetchCardsData(complition: @escaping (Cards) -> Void) {
         OperationQueue().addOperation {
             AF.request("https://api.magicthegathering.io/v1/cards", method: .get, parameters: ["name": self.cardName]).response { data in
-                
                 guard let recevedData = data.data else { return }
                 
                 do {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Cell: View {
+struct CardsTableViewCell: View {
     @State var card: Card
     var body: some View {
         
@@ -33,9 +33,7 @@ struct Cell: View {
                         ProgressView()
                     }
                     .frame(width: 100, height: 125)
-                }
-    //            .frame(height: 135)
-                
+                }                
                 .padding(.horizontal)
             }
         }

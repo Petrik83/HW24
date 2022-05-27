@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CardsList: View {
+struct CardsList1: View {
     let columns = [GridItem(.flexible())]
     @ObservedObject var data = ResevedData()
 

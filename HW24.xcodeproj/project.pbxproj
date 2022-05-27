@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		6DBE48962840A48000780B84 /* ResevedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBE48952840A48000780B84 /* ResevedData.swift */; };
 		6DBE48982840B70A00780B84 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBE48972840B70A00780B84 /* NetworkManager.swift */; };
+		6DBE489E2840F0E300780B84 /* CardNameEnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBE489D2840F0E300780B84 /* CardNameEnterView.swift */; };
+		6DBE48A02840F56900780B84 /* CardsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBE489F2840F56900780B84 /* CardsTableView.swift */; };
 		6DE44BE62838E5F6009142E4 /* HW24App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE44BE52838E5F6009142E4 /* HW24App.swift */; };
 		6DE44BE82838E5F6009142E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE44BE72838E5F6009142E4 /* ContentView.swift */; };
 		6DE44BEA2838E5F7009142E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DE44BE92838E5F7009142E4 /* Assets.xcassets */; };
 		6DE44BED2838E5F7009142E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DE44BEC2838E5F7009142E4 /* Preview Assets.xcassets */; };
 		6DE44BF42838E786009142E4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE44BF32838E786009142E4 /* Model.swift */; };
-		6DE44BF62838E801009142E4 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE44BF52838E801009142E4 /* Cell.swift */; };
-		6DE44BFB2838EEC4009142E4 /* CardsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE44BFA2838EEC4009142E4 /* CardsList.swift */; };
-		6DE44BFD283970DC009142E4 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE44BFC283970DC009142E4 /* SearchBar.swift */; };
+		6DE44BF62838E801009142E4 /* CardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE44BF52838E801009142E4 /* CardsTableViewCell.swift */; };
 		6DE44BFF283BD08A009142E4 /* ReceveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE44BFE283BD08A009142E4 /* ReceveData.swift */; };
 		8A52B0F53E2FEC6233E41DCD /* Pods_HW24.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FAED23B02B4EE25CADECBFB /* Pods_HW24.framework */; };
 /* End PBXBuildFile section */
@@ -27,16 +27,16 @@
 		68291373B0A48DC9FC1725A5 /* Pods-HW24.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW24.release.xcconfig"; path = "Target Support Files/Pods-HW24/Pods-HW24.release.xcconfig"; sourceTree = "<group>"; };
 		6DBE48952840A48000780B84 /* ResevedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResevedData.swift; sourceTree = "<group>"; };
 		6DBE48972840B70A00780B84 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6DBE489D2840F0E300780B84 /* CardNameEnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNameEnterView.swift; sourceTree = "<group>"; };
+		6DBE489F2840F56900780B84 /* CardsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableView.swift; sourceTree = "<group>"; };
 		6DE44BE22838E5F6009142E4 /* HW24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE44BE52838E5F6009142E4 /* HW24App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW24App.swift; sourceTree = "<group>"; };
 		6DE44BE72838E5F6009142E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6DE44BE92838E5F7009142E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DE44BEC2838E5F7009142E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6DE44BF32838E786009142E4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		6DE44BF52838E801009142E4 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		6DE44BF52838E801009142E4 /* CardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableViewCell.swift; sourceTree = "<group>"; };
 		6DE44BF92838EB98009142E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		6DE44BFA2838EEC4009142E4 /* CardsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsList.swift; sourceTree = "<group>"; };
-		6DE44BFC283970DC009142E4 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		6DE44BFE283BD08A009142E4 /* ReceveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceveData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,10 +94,10 @@
 				6DE44BE52838E5F6009142E4 /* HW24App.swift */,
 				6DE44BE72838E5F6009142E4 /* ContentView.swift */,
 				6DE44BFE283BD08A009142E4 /* ReceveData.swift */,
-				6DE44BFA2838EEC4009142E4 /* CardsList.swift */,
+				6DBE489D2840F0E300780B84 /* CardNameEnterView.swift */,
+				6DBE489F2840F56900780B84 /* CardsTableView.swift */,
 				6DE44C00283F83E5009142E4 /* Controllers */,
-				6DE44BFC283970DC009142E4 /* SearchBar.swift */,
-				6DE44BF52838E801009142E4 /* Cell.swift */,
+				6DE44BF52838E801009142E4 /* CardsTableViewCell.swift */,
 				6DE44BF32838E786009142E4 /* Model.swift */,
 				6DE44BE92838E5F7009142E4 /* Assets.xcassets */,
 				6DE44BEB2838E5F7009142E4 /* Preview Content */,
@@ -238,13 +238,13 @@
 			files = (
 				6DBE48982840B70A00780B84 /* NetworkManager.swift in Sources */,
 				6DE44BF42838E786009142E4 /* Model.swift in Sources */,
-				6DE44BF62838E801009142E4 /* Cell.swift in Sources */,
+				6DBE489E2840F0E300780B84 /* CardNameEnterView.swift in Sources */,
+				6DE44BF62838E801009142E4 /* CardsTableViewCell.swift in Sources */,
 				6DE44BE82838E5F6009142E4 /* ContentView.swift in Sources */,
 				6DE44BE62838E5F6009142E4 /* HW24App.swift in Sources */,
 				6DBE48962840A48000780B84 /* ResevedData.swift in Sources */,
-				6DE44BFB2838EEC4009142E4 /* CardsList.swift in Sources */,
+				6DBE48A02840F56900780B84 /* CardsTableView.swift in Sources */,
 				6DE44BFF283BD08A009142E4 /* ReceveData.swift in Sources */,
-				6DE44BFD283970DC009142E4 /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

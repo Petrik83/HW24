@@ -8,30 +8,46 @@
 import SwiftUI
 import Alamofire
 struct ContentView: View {
-//    var cards: [Cards] = []
-    @StateObject var data = ResevedData()
+    @ObservedObject var data = ResevedData()
+    @State var show = false
 
     @State var cardsArray = Cards(cards: [Card]())
-
+    
     
     @State var text = "Black Lotus"
     
     var body: some View {
         NavigationView {
-            VStack {
-                SearchBar(data: data, text: $text, cardsArray: $cardsArray)
-                Button {
-                    print(data.cardsData)
-                } label: {
-                    Text("button")
+            if show {
+                    CardsTableView(data: data, show: $show)
+                    .navigationBarTitle("Magic: The Gathering")
+                    .toolbar {
+                        ToolbarItem(placement: .cancellationAction) {
+                            withAnimation(.easeInOut(duration: 1.0)) {
+                                Button {
+                                    show = false
+                                    data.isLoaded = false
+                                    data.cardsData.cards.removeAll()
+                                } label: {
+                                    Image(systemName: "house")
+                                }
+                                .foregroundColor(Color.black)
+                            }
+                        }
+                    }
+                    
                 }
-
-                CardsList(data: data, cardsArray: $cardsArray)
-            }
-            .navigationTitle("Magic: The Gathering")
+             else {
+            CardNameEnterView(data: data, show: $show)
+                     .navigationBarTitle("Magic: The Gathering")
+         }
+                
         }
         
+
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
