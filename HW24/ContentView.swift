@@ -8,18 +8,14 @@
 import SwiftUI
 import Alamofire
 struct ContentView: View {
+    
     @ObservedObject var data = ResevedData()
     @State var show = false
-
-    @State var cardsArray = Cards(cards: [Card]())
-    
-    
-    @State var text = "Black Lotus"
     
     var body: some View {
         NavigationView {
             if show {
-                    CardsTableView(data: data, show: $show)
+                CardsTableView(data: data)
                     .navigationBarTitle("Magic: The Gathering")
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
@@ -35,19 +31,12 @@ struct ContentView: View {
                             }
                         }
                     }
-                    
-                }
-             else {
-            CardNameEnterView(data: data, show: $show)
-                     .navigationBarTitle("Magic: The Gathering")
-         }
-                
+            } else {
+                CardNameEnterView(data: data, show: $show)
+                    .navigationBarTitle("Magic: The Gathering")
+            }
         }
-        
-
     }
-    
-    
 }
 
 struct ContentView_Previews: PreviewProvider {

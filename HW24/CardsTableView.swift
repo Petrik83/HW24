@@ -11,7 +11,7 @@ struct CardsTableView: View {
     var data: ResevedData
     @State var columns = [GridItem(.flexible())]
 
-    @Binding var show: Bool
+    @State var showCardInfo = false
 
 
     var body: some View {
@@ -19,7 +19,15 @@ struct CardsTableView: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     LazyVGrid(columns: columns) {
                         ForEach(0..<data.cardsData.cards.count, id:\.self) { card in
-                            CardsTableViewCell(card: data.cardsData.cards[card])
+                            Button {
+                                showCardInfo = true
+                            } label: {
+//                                Text("dsdfsf")
+                                CardsTableViewCell(card: data.cardsData.cards[card])
+                            }.sheet(isPresented: $showCardInfo) {
+                                CardInfo()
+                            }
+
                         }
                     }
                 }

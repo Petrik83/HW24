@@ -11,9 +11,6 @@ struct CardsTableViewCell: View {
     @State var card: Card
     var body: some View {
         
-        Button {
-            print(card)
-        } label: {
             VStack {
                 Divider()
                 HStack {
@@ -37,7 +34,6 @@ struct CardsTableViewCell: View {
                     }
                 }                
                 .padding(.horizontal)
-            }
         }
     }
 }
