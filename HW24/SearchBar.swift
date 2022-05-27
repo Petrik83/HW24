@@ -9,24 +9,35 @@ import SwiftUI
 import Alamofire
 
 struct SearchBar: View {
+    @ObservedObject var data: ResevedData
+    
     @Binding var text: String
-
+    @State var cardsArr = Cards(cards: [Card]())
     @State private var isEditing = false
+    
     @Binding var cardsArray: Cards
     var body: some View {
         HStack {
 
             HStack {
-                Image(systemName: "magnifyingglass")
-                    .padding(.leading)
-                TextField("Search ...", text: $text)
+                Button {
+                    print(data.cardsData)
+
+                } label: {
+                    Image(systemName: "magnifyingglass")
+                        .padding(.leading)
+                }
+
+                
+                TextField("Search ...", text: $data.searchText)
                     .padding(7)
                     .onTapGesture {
                         self.isEditing = true
                 }
                 
                 Button(action: {
-                    self.text = ""
+                    data.cardsData = cardsArr
+//                    self.text = ""
 //                    print(cardsArray)
                 }) {
                     Image(systemName: "xmark.circle.fill").opacity(text == "" ? 0 : 1)
@@ -42,11 +53,12 @@ struct SearchBar: View {
 
 //            if isEditing {
                 Button(action: {
-                    ReceveData(cardName: text).fetchCardsData { recevedData in
-                        cardsArray = Cards(cards: [Card]())
-                        cardsArray = recevedData
-//                        print(cardsArray)
+                    data.cardsData.cards.removeAll()
+                    ReceveData(cardName: data.searchText).fetchCardsData { recevedData in
+                        cardsArr = recevedData
                         print("----------------------------")
+//                        print(cardsArray)
+
                     }
                 }) {
                     Text("Search")

@@ -18,11 +18,20 @@ class ReceveData {
     
     func fetchCardsData(complition: @escaping (Cards) -> Void) {
         OperationQueue().addOperation {
-            AF.request("https://api.magicthegathering.io/v1/cards", method: .get, parameters: ["name": self.cardName]).responseDecodable(of: Cards.self) { data in
-                guard let recevedData = data.value else { return }
-                DispatchQueue.main.async {
-                    complition(recevedData)
+            AF.request("https://api.magicthegathering.io/v1/cards", method: .get, parameters: ["name": self.cardName]).response { data in
+                
+                guard let recevedData = data.data else { return }
+                
+                do {
+                    let cards = try JSONDecoder().decode(Cards.self, from: recevedData)
+                    complition(cards)
+                } catch let jsonError {
+                    print("error in JSON:", jsonError)
+
                 }
+//                DispatchQueue.main.async {
+//                    complition(recevedData)
+//                }
             }
         }
     }

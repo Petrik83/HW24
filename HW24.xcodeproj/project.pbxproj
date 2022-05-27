@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DBE48962840A48000780B84 /* ResevedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBE48952840A48000780B84 /* ResevedData.swift */; };
+		6DBE48982840B70A00780B84 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBE48972840B70A00780B84 /* NetworkManager.swift */; };
 		6DE44BE62838E5F6009142E4 /* HW24App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE44BE52838E5F6009142E4 /* HW24App.swift */; };
 		6DE44BE82838E5F6009142E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE44BE72838E5F6009142E4 /* ContentView.swift */; };
 		6DE44BEA2838E5F7009142E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DE44BE92838E5F7009142E4 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 		0FAED23B02B4EE25CADECBFB /* Pods_HW24.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HW24.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB8F724A3126DB02925CA27 /* Pods-HW24.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW24.debug.xcconfig"; path = "Target Support Files/Pods-HW24/Pods-HW24.debug.xcconfig"; sourceTree = "<group>"; };
 		68291373B0A48DC9FC1725A5 /* Pods-HW24.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW24.release.xcconfig"; path = "Target Support Files/Pods-HW24/Pods-HW24.release.xcconfig"; sourceTree = "<group>"; };
+		6DBE48952840A48000780B84 /* ResevedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResevedData.swift; sourceTree = "<group>"; };
+		6DBE48972840B70A00780B84 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6DE44BE22838E5F6009142E4 /* HW24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE44BE52838E5F6009142E4 /* HW24App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW24App.swift; sourceTree = "<group>"; };
 		6DE44BE72838E5F6009142E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 				6DE44BE72838E5F6009142E4 /* ContentView.swift */,
 				6DE44BFE283BD08A009142E4 /* ReceveData.swift */,
 				6DE44BFA2838EEC4009142E4 /* CardsList.swift */,
+				6DE44C00283F83E5009142E4 /* Controllers */,
 				6DE44BFC283970DC009142E4 /* SearchBar.swift */,
 				6DE44BF52838E801009142E4 /* Cell.swift */,
 				6DE44BF32838E786009142E4 /* Model.swift */,
@@ -106,6 +111,15 @@
 				6DE44BEC2838E5F7009142E4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6DE44C00283F83E5009142E4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6DBE48972840B70A00780B84 /* NetworkManager.swift */,
+				6DBE48952840A48000780B84 /* ResevedData.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,10 +236,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DBE48982840B70A00780B84 /* NetworkManager.swift in Sources */,
 				6DE44BF42838E786009142E4 /* Model.swift in Sources */,
 				6DE44BF62838E801009142E4 /* Cell.swift in Sources */,
 				6DE44BE82838E5F6009142E4 /* ContentView.swift in Sources */,
 				6DE44BE62838E5F6009142E4 /* HW24App.swift in Sources */,
+				6DBE48962840A48000780B84 /* ResevedData.swift in Sources */,
 				6DE44BFB2838EEC4009142E4 /* CardsList.swift in Sources */,
 				6DE44BFF283BD08A009142E4 /* ReceveData.swift in Sources */,
 				6DE44BFD283970DC009142E4 /* SearchBar.swift in Sources */,

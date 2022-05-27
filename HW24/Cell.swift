@@ -10,30 +10,38 @@ import SwiftUI
 struct Cell: View {
     @State var card: Card
     var body: some View {
-        VStack {
-            Divider()
-            HStack {
-                VStack(alignment: .leading) {
+        
+        Button {
+            print(card)
+        } label: {
+            VStack {
+                Divider()
+                HStack {
+                    VStack(alignment: .leading) {
+                        Spacer()
+                        Text("Card Name: \(card.name)")
+                        Spacer()
+                        Text("Set Name: \(card.setName)")
+                        Spacer()
+                    }
                     Spacer()
-                    Text("Card Name: \(card.name)")
-                    Spacer()
-                    Text("Set Name: \(card.setName)")
-                    Spacer()
-                }
-                Spacer()
-                AsyncImage(url: URL(string: card.imageUrl ?? "")) { image in
-                    image.resizable().padding(.vertical, 3)
+                    AsyncImage(url: URL(string: card.imageUrl ?? "")) { image in
+                        image.resizable().padding(.vertical, 3)
 
-                    
-                } placeholder: {
-                    ProgressView()
+                        
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .frame(width: 100, height: 125)
                 }
-                .frame(width: 100, height: 125)
+    //            .frame(height: 135)
+                
+                .padding(.horizontal)
             }
-//            .frame(height: 135)
-            
-            .padding(.horizontal)
         }
+
+        
+        
     }
     
 }

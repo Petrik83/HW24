@@ -9,13 +9,15 @@ import SwiftUI
 
 struct CardsList: View {
     let columns = [GridItem(.flexible())]
+    @ObservedObject var data = ResevedData()
+
     @Binding var cardsArray: Cards
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVGrid(columns: columns) {
-                ForEach(0..<cardsArray.cards.count, id:\.self) { card in
-                    Cell(card: cardsArray.cards[card]).id(card)
+                ForEach(0..<data.cardsData.cards.count, id:\.self) { card in
+                    Cell(card: data.cardsData.cards[card])
                 }
             }
         }
