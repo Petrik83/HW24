@@ -25,23 +25,21 @@ struct CardsTableViewCell: View {
                         Spacer()
                     }
                     Spacer()
+                    if card.imageUrl != nil {
                     AsyncImage(url: URL(string: card.imageUrl ?? "")) { image in
                         image.resizable().padding(.vertical, 3)
-
-                        
                     } placeholder: {
                         ProgressView()
                     }
-                    .frame(width: 100, height: 125)
+                        .frame(width: 100, height: 125)
+                    } else {
+                        Image("noImageAvailable")
+                    }
                 }                
                 .padding(.horizontal)
             }
         }
-
-        
-        
     }
-    
 }
 
 
