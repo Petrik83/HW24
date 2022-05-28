@@ -15,9 +15,9 @@ struct Card: Decodable {
     let name: String
     let setName: String
     let imageUrl: String?
-    let names: [String]?
     let manaCost: String?
     let type: String?
     let rarity: String?
     let power: String?
+    let text: String?
 }

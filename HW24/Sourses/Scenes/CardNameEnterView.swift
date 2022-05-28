@@ -10,7 +10,7 @@ import SwiftUI
 struct CardNameEnterView: View {
     @ObservedObject var data: ResevedData
     @Binding var show: Bool
-
+    
     var body: some View {
         
         VStack {
@@ -21,19 +21,9 @@ struct CardNameEnterView: View {
             Button {
                 show.toggle()
                 data.getData()
-//                print(data.cardsData.cards)
             } label: {
                 Text("Search")
             }
-
-            
-            
         }
     }
 }
-
-//struct CardNameEnterView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CardNameEnterView(data: ResevedData(), show: false)
-//    }
-//}

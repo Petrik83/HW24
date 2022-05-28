@@ -23,12 +23,12 @@ struct CardsTableViewCell: View {
                     }
                     Spacer()
                     if card.imageUrl != nil {
-                    AsyncImage(url: URL(string: card.imageUrl ?? "")) { image in
-                        image.resizable().padding(.vertical, 3)
+                    AsyncImage(url: URL(string: card.imageUrl!)) { image in
+                        image.resizable().padding(.vertical, CardsTableViewCellMetric.imagePadding)
                     } placeholder: {
                         ProgressView()
                     }
-                        .frame(width: 100, height: 125)
+                    .frame(width: CardsTableViewCellMetric.imageWidth, height: CardsTableViewCellMetric.imageHeight)
                     } else {
                         Image("noImageAvailable")
                     }
@@ -38,9 +38,8 @@ struct CardsTableViewCell: View {
     }
 }
 
-
-//struct Cell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Cell(cardsArray: <#Binding<Cards>#>)
-//    }
-//}
+enum CardsTableViewCellMetric {
+    static let imageHeight = 125.0
+    static let imageWidth = 100.0
+    static let imagePadding = 3.0
+}
